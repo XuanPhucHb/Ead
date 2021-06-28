@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>List Sale</title>
+</head>
+<body>
+<div class="col-md-12">
+    <div class="col-3"></div>
+    <div class="container col-6">
+        <br/>
+        <br/>
+        <table class="table table-active">
+            <tr>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Date of Manf</th>
+                <th>Price</th>
+            </tr>
+            <tr th:each="prod : ${products}">
+                <td th:text="${prod.prodName}"></td>
+                <td th:text="${prod.description}"></td>
+                <td th:text="${prod.dateOfManf}"></td>
+                <td th:text="${prod.price}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-3"></div>
+    <div class="container col-6">
+        <br/>
+        <br/>
+        <table class="table table-active">
+            <tr>
+                <th>Sale man ID</th>
+                <th>Sale man Name</th>
+                <th>Date of Sale</th>
+                <th>Product Name</th>
+            </tr>
+            <tr th:each="prod : ${products}">
+                <td th:text="${prod.prodName}"></td>
+                <td th:text="${prod.description}"></td>
+                <td th:text="${prod.dateOfManf}"></td>
+                <td th:text="${prod.price}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
